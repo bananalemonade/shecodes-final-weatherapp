@@ -1,3 +1,32 @@
 h1 {
-  color: blue;
+  font-family: "Hind Vadodara", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  font-family: "Hind Vadodara", sans-serif;
+  list-style: none;
+  font-size: 20px;
+  line-height: 20px;
+}
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.weather-app {
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.temperature-on-the-right {
+  font-family: "Hind Vadodara", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
 }
