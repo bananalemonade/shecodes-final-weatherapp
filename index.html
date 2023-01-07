@@ -22,6 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -29,10 +30,10 @@
       <div class="weather-app">
         <div class="row">
           <div class="col-6">
-            <h1>Amsterdam</h1>
+            <h1 id="city">Amsterdam</h1>
             <ul>
-              <li>Saturday 13:30</li>
-              <li>sunny</li>
+              <li id="date"></li>
+              <li id="description">sunny</li>
             </ul>
           </div>
           <div class="col-3">
@@ -40,8 +41,9 @@
               src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
               alt="sunny"
             />
-            <div>
-              <span class="temperature-on-the-right"> 30°C </span>
+            <div class="temperature-on-the-right">
+              <span id="temperature"></span>
+              <span>°C</span>
             </div>
           </div>
         </div>
