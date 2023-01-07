@@ -26,34 +26,48 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app-wrapper"></div>
-      <div class="weather-app">
-        <div class="row">
-          <div class="col-6">
-            <h1 id="city">Amsterdam</h1>
-            <ul>
-              <li id="date"></li>
-              <li id="description">sunny</li>
-            </ul>
-          </div>
-          <div class="col-3">
-            <img src="" alt="sunny" id="icon" />
-            <div class="temperature-on-the-right">
-              <span id="temperature"></span>
-              <span>°C</span>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city"
+                  class="form-control"
+                  id="city-input"
+                />
+              </div>
+              <div class="col-3"><input type="submit" value="search" /></div>
+            </div>
+          </form>
+          <div class="row">
+            <div class="col-9">
+              <h1 id="city">Amsterdam</h1>
+              <ul>
+                <li id="date"></li>
+                <li id="description">sunny</li>
+              </ul>
+            </div>
+            <div class="col-3">
+              <img src="" alt="sunny" id="icon" />
+              <div class="temperature-on-the-right">
+                <span id="temperature"></span>
+                <span>°C</span>
+              </div>
             </div>
           </div>
+          <br />
         </div>
-        <br />
+        <small>
+          <a
+            href="https://github.com/bananalemonade/weather-app-shecodes"
+            target="_blank"
+            >Open-source-code</a
+          >
+          by Anna Heimbrock
+        </small>
       </div>
-      <small>
-        <a
-          href="https://github.com/bananalemonade/weather-app-shecodes"
-          target="_blank"
-          >Open-source-code</a
-        >
-        by Anna Heimbrock
-      </small>
     </div>
     <script src="src/index.js"></script>
   </body>
