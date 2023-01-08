@@ -37,6 +37,33 @@ function displayTemperature(response) {
   console.log(response.data);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+      <div class="weather-forecast-date">${day}</div>
+      <img
+        src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+        alt=""
+        width="42"
+      />
+      <div class="weather-forecast-temperatures">
+        <span class="weather-forecast-temp-max">30°C/</span>
+        <span class="weather-forecast-temp-min">10°C</span>
+      </div>
+    </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
@@ -52,3 +79,4 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 search("Amsterdam");
+displayForecast();

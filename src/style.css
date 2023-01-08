@@ -1,5 +1,4 @@
 h1 {
-  font-family: "Hind Vadodara", sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 50px;
@@ -10,7 +9,6 @@ ul {
   padding: 0;
 }
 li {
-  font-family: "Hind Vadodara", sans-serif;
   list-style: none;
   font-size: 20px;
   line-height: 20px;
@@ -21,12 +19,28 @@ li {
 }
 
 .weather-app {
+  font-family: "Hind Vadodara", sans-serif;
   padding: 20px;
   border: 1px solid black;
   border-radius: 10px;
 }
 .temperature-on-the-right {
-  font-family: "Hind Vadodara", sans-serif;
   font-weight: bold;
   font-size: 30px;
+}
+.weather-forecast {
+  text-align: center;
+}
+.weather-forecast-date {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.weather-forecast-icon {
+  margin: 0;
+  padding: 0;
+}
+.weather-forecast-temperatures {
+  font-size: 12px;
+  font-weight: 500;
 }
