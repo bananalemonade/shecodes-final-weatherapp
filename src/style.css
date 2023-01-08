@@ -10,30 +10,38 @@ ul {
 }
 li {
   list-style: none;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 20px;
+  color: rgba(0, 0, 0, 0.5);
 }
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
 }
-
 .weather-app {
   font-family: "Hind Vadodara", sans-serif;
   padding: 20px;
   border: 1px solid black;
   border-radius: 10px;
 }
+.weather-app .form-control {
+  background: #c5daf8c2;
+  border: none;
+  padding: 10px;
+  color: #a8a5b4;
+}
 .temperature-on-the-right {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 40px;
 }
 .weather-forecast {
   text-align: center;
+  margin-top: 10px;
 }
 .weather-forecast-date {
   font-size: 12px;
   font-weight: 700;
+  color: rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
 }
 .weather-forecast-icon {
@@ -43,4 +51,18 @@ li {
 .weather-forecast-temperatures {
   font-size: 12px;
   font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+}
+.city {
+  margin-top: 20px;
+}
+.btn {
+  background: #7f94b1;
+  border: #7f94b1;
+  padding: 10px;
+}
+.btn:hover {
+  background: white;
+  border: solid #7f94b1;
+  color: #7f94b1;
 }
