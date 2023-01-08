@@ -27,9 +27,9 @@ function displayTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
-  cityElement.innerHMTL = response.data.city;
-  descriptionElement.innerHMTL = response.data.condition.description;
-  temperatureElement.innerHMTL = Math.round(response.data.temperature.current);
+  cityElement.innerHTML = response.data.city;
+  descriptionElement.innerHTML = response.data.condition.description;
+  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   dateElement.innerHTML = formatDate(response.data.time * 1000);
   iconElement.setAttribute("src", response.data.condition.icon_url);
 
