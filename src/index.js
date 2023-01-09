@@ -33,15 +33,21 @@ function displayTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
+  let bgImage = document.querySelector(".transparent-box");
 
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   dateElement.innerHTML = formatDate(response.data.time * 1000);
   iconElement.setAttribute("src", response.data.condition.icon_url);
+  bgImage.style.backgroundImage =
+    "url(https://upload.wikimedia.org/wikipedia/commons/a/a0/White_Cumulus_Clouds_against_Blue_Sky_%282%29.jpg)";
 
   getForecast(response.data.coordinates);
+  //
+  //`${customWeatherData(response.data.condition.icon).backgroundImage}`
 }
+
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -51,7 +57,6 @@ function formatDay(timestamp) {
   return days[day];
 }
 function displayForecast(response) {
-  console.log(response.data);
   let forecast = response.data.daily;
 
   let forecastElement = document.querySelector("#forecast");
@@ -102,3 +107,66 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 search("Amsterdam");
+
+let customWeatherData = {
+  "clear-sky-day": {
+    backgroundImage: "url(src/img-background/clear-sky-day.jpg)",
+  },
+  "clear-sky-night": {
+    backgroundImage: "url(src/img-background/clear-sky-night.jpg)",
+  },
+  "few-clouds-day": {
+    backgroundImage: "url(src/img-background/few-clouds-day.jpg)",
+  },
+  "few-clouds-night": {
+    backgroundImage: "url(src/img-background/few-clouds-night.jpg)",
+  },
+  "scattered-clouds-day": {
+    backgroundImage: "url(src/img-background/scattered-clouds-day.jpg)",
+  },
+  "scattered-clouds-night": {
+    backgroundImage: "url(src/img-background/scattered-clouds-night.jpg)",
+  },
+  "broken-clouds-day": {
+    backgroundImage: "url(src/img-background/broken-clouds-day.jpg)",
+  },
+  "broken-clouds-night": {
+    backgroundImage: "url(src/img-background/broken-clouds-nightjpg)",
+  },
+  "shower-rain-day": {
+    backgroundImage: "url(src/img-background/shower-rain-day.jpg)",
+  },
+  "shower-rain-night": {
+    backgroundImage: "url(src/img-background/shower-rain-night.jpg)",
+  },
+  "rain-day": {
+    backgroundImage: "url(src/img-background/rain-day.jpg)",
+  },
+  "rain-night": {
+    backgroundImage: "url(src/img-background/rain-night.jpg)",
+  },
+  "thunderstorm-day": {
+    backgroundImage: "url(src/img-background/thunderstorm-day.jpg)",
+  },
+  "thunderstorm-night": {
+    backgroundImage: "url(src/img-background/thunderstorm-night.jpg)",
+  },
+  "snow-day": {
+    backgroundImage: "url(src/img-background/snow-day.jpg)",
+  },
+  "snow-night": {
+    backgroundImage: "url(src/img-background/snow-night.jpg)",
+  },
+  "mist-day": {
+    backgroundImage: "url(src/img-background/mist-day.jpg)",
+  },
+  "mist-night": {
+    backgroundImage: "url(src/img-background/mist-night.jpg)",
+  },
+  default: {
+    iconClass: "fa-question",
+    spotifyId: "5YMXGBD6vcYP7IolemyLtK?utm_source=generator",
+    trackDescription: "Here's a weird song for weird days:",
+    backgroundImage: "url(src/img-background/01d.jpg)",
+  },
+};

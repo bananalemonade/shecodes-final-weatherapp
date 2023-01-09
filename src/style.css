@@ -20,6 +20,7 @@ li {
 }
 .weather-app {
   font-family: "Hind Vadodara", sans-serif;
+  background: rgba(245, 245, 245, 0.5);
   padding: 20px;
   border: 1px solid black;
   border-radius: 10px;
@@ -65,4 +66,15 @@ li {
   background: white;
   border: solid #7f94b1;
   color: #7f94b1;
+}
+.transparent-box {
+  padding: 40px;
+
+  backdrop-filter: blur(5px);
+
+  max-width: 100%;
+
+  background-color: rgba(96, 125, 139, 0.5);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
