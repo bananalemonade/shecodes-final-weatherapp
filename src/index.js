@@ -28,6 +28,7 @@ function getForecast(coordinates) {
 }
 
 function displayTemperature(response) {
+  console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descriptionElement = document.querySelector("#description");
@@ -41,7 +42,7 @@ function displayTemperature(response) {
   dateElement.innerHTML = formatDate(response.data.time * 1000);
   iconElement.setAttribute("src", response.data.condition.icon_url);
   bgImage.style.backgroundImage = `${
-    customWeatherData(response.data.condition.icon).backgroundImage
+    customWeatherData[response.data.condition.icon].backgroundImage
   }`;
 
   getForecast(response.data.coordinates);
@@ -130,7 +131,7 @@ let customWeatherData = {
     backgroundImage: "url(src/img-background/broken-clouds-day.jpg)",
   },
   "broken-clouds-night": {
-    backgroundImage: "url(src/img-background/broken-clouds-nightjpg)",
+    backgroundImage: "url(src/img-background/broken-clouds-night.jpg)",
   },
   "shower-rain-day": {
     backgroundImage: "url(src/img-background/shower-rain-day.jpg)",
