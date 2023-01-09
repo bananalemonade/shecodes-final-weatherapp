@@ -40,12 +40,11 @@ function displayTemperature(response) {
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   dateElement.innerHTML = formatDate(response.data.time * 1000);
   iconElement.setAttribute("src", response.data.condition.icon_url);
-  bgImage.style.backgroundImage =
-    "url(https://upload.wikimedia.org/wikipedia/commons/a/a0/White_Cumulus_Clouds_against_Blue_Sky_%282%29.jpg)";
+  bgImage.style.backgroundImage = `${
+    customWeatherData(response.data.condition.icon).backgroundImage
+  }`;
 
   getForecast(response.data.coordinates);
-  //
-  //`${customWeatherData(response.data.condition.icon).backgroundImage}`
 }
 
 function formatDay(timestamp) {
