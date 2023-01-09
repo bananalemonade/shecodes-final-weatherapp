@@ -20,7 +20,7 @@ li {
 }
 .weather-app {
   font-family: "Hind Vadodara", sans-serif;
-  background: rgba(245, 245, 245, 0.6);
+  background: rgba(245, 245, 245, 0.7);
   padding: 20px;
   border: none;
   border-radius: 10px;
@@ -29,7 +29,7 @@ li {
   background: #c5daf8c2;
   border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 10px;
-  color: #a8a5b4;
+  color: #403f45c4;
 }
 .temperature-on-the-right {
   font-weight: bold;
