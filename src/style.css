@@ -12,7 +12,7 @@ li {
   list-style: none;
   font-size: 18px;
   line-height: 20px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.6);
 }
 .weather-app-wrapper {
   max-width: 600px;
@@ -20,14 +20,14 @@ li {
 }
 .weather-app {
   font-family: "Hind Vadodara", sans-serif;
-  background: rgba(245, 245, 245, 0.5);
+  background: rgba(245, 245, 245, 0.6);
   padding: 20px;
-  border: 1px solid black;
+  border: none;
   border-radius: 10px;
 }
 .weather-app .form-control {
   background: #c5daf8c2;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 10px;
   color: #a8a5b4;
 }
@@ -42,7 +42,7 @@ li {
 .weather-forecast-date {
   font-size: 12px;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.6);
   text-transform: uppercase;
 }
 .weather-forecast-icon {
@@ -52,7 +52,7 @@ li {
 .weather-forecast-temperatures {
   font-size: 12px;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.6);
 }
 .city {
   margin-top: 20px;
