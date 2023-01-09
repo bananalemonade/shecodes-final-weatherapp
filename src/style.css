@@ -77,4 +77,6 @@ li {
   background-color: rgba(96, 125, 139, 0.5);
   background-repeat: no-repeat;
   background-size: cover;
+
+  height: 100%;
 }
