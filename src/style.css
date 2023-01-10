@@ -15,7 +15,7 @@ li {
   color: rgba(0, 0, 0, 0.6);
 }
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 470px;
   margin: 30px auto;
 }
 .weather-app {
